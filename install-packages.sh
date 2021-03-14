@@ -17,7 +17,7 @@ EXTRA_PKGS="apacite booktabs $HYPERREF_PKGS $BIBLATEX_PKGS $NOMENCL_PKGS ntheore
 MARKDOWN_PKGS="markdown fancyvrb csvsimple gobble"
 DOC_PKGS="hologo listings xcolor $MARKDOWN_PKGS";
 EXAMPLE_PKGS="float fp metalogo multirow mwe"
-ALGORITHM_PKGS="algorithm algpseudocode";
+ALGORITHM_PKGS="algorithmicx algpseudocodex";
 
 tlmgr install $BIN_PKGS $REQUIRED_PKGS $FONT_PKGS $EXTRA_PKGS $DOC_PKGS \
     $EXAMPLE_PKGS $ALGORITHM_PKGS;
