@@ -18,6 +18,7 @@ MARKDOWN_PKGS="markdown fancyvrb csvsimple gobble"
 DOC_PKGS="hologo listings xcolor $MARKDOWN_PKGS";
 EXAMPLE_PKGS="float fp metalogo multirow mwe"
 ALGORITHM_PKGS="algorithm2e algorithmicx algpseudocodex";
+CITE_PKGS="cite";
 
 tlmgr install $BIN_PKGS $REQUIRED_PKGS $FONT_PKGS $EXTRA_PKGS $DOC_PKGS \
-    $EXAMPLE_PKGS $ALGORITHM_PKGS;
+    $EXAMPLE_PKGS $ALGORITHM_PKGS $CITE_PKGS;
