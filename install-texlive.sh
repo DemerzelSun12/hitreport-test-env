@@ -3,14 +3,14 @@ set -e
 
 # download installer
 REMOTE="https://mirrors.rit.edu/CTAN/systems/texlive/tlnet";
-INSTALL="/sources/install-texlive";
+INSTALL="/tmp/install-texlive";
 
 # install TeX Live & remove installer
 mkdir -p "$INSTALL";
 curl -sSL "$REMOTE/install-tl-unx.tar.gz" | tar -xz -C "$INSTALL" \
     --strip-components=1;
 "$INSTALL/install-tl" -no-gui -repository $REMOTE \
-    -profile /sources/texlive.profile;
+    -profile /tmp/texlive.profile;
 rm -rf "$INSTALL";
 
 # add packages with tlmgr
