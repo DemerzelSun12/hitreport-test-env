@@ -11,8 +11,8 @@ RUN apt-get update &&\
     rm -rf /var/lib/apt/lists/*
 
 COPY install-texlive.sh install-packages.sh texlive.profile /tmp/
-RUN /tmp/install-texlive.sh
-RUN /tmp/install-packages.sh
+RUN nohup bash -x /tmp/install-texlive.sh
+RUN nohup bash -x /tmp/install-packages.sh
 
 ENV PATH="/opt/texlive/bin/x86_64-linux:${PATH}"
 CMD /bin/bash
